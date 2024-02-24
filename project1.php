@@ -1,68 +1,126 @@
 <!-------------------------------------------------------
 //  "Project 1 Survey/Quiz": Correcting and adjusting
-//  a "sub-par" page.
+//  a page.
 //
 //  Edited & Written by: Derick Marr
 //  Contact: dmarr@genesee.edu
 //------------------------------------------------------>
-
 <!DOCTYPE html>
-<html><head>
-<title>Survey: Survey Name</title>  <!-- TODO: Change "Survey Name" to the topic of your survey -->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey: Survey Name</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-dark text-light d-flex flex-column min-vh-100">
 
+<header>
+    <div class="container py-4">
+        <h1 class="text-center" style="font-size: 3rem;">Survey: Survey Name</h1>
+    </div>
+</header>
 
-<!-- TODO: Fix all bugs/poor practice in the form -->
-<form action="" method="get" class="survey">
+<main class="flex-grow-1">
+    <div class="container">
+        <form action="" method="get" class="survey">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>What's this about?</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            </div>
+            <div class="col-md-6">
+                <h2>Survey Form</h2>
+                
+                    <label for="email-id">Enter your email: </label>
+                    <input type="email" name="email-name" id="email-id" class="form-control">
+                
+                    <label for="pw-id">Enter your password: </label>
+                    <input type="password" name="pw-name" id="pw-id" class="form-control">
+                
+                    <label for="age">What age group do you belong to? </label>
+                    <select name="age" id="age" class="form-select">
+                        <?php
+                        $age_ranges = array(
+                            "0-12",
+                            "13-17",
+                            "18-22",
+                            "23-27",
+                            "28-32",
+                            "33-37",
+                            "38-42",
+                            "43-47",
+                            "48-52",
+                            "53-57",
+                            "58-62",
+                            "63-67",
+                            "68-72",
+                            "72+",
+                            "Anagist",
+                            "Omniagist",
+                            "Chronoagist",
+                            "Eonagist",
+                            "Temporalagist",
+                            "Agefluid"
+                        );
 
-<label>Enter your email: </label>
-<input type="email" name="email-name" id="email-id">
+                        foreach ($age_ranges as $range) {
+                            echo "<option value='$range'>$range</option>";
+                        }
+                        ?>
+                    </select>
+                
+                    <label for="gender">What gender do you identify with? </label>
+                    <select name="gender" id="gender" class="form-select">
+                        <?php
+                        $genders = array(
+                            "Male",
+                            "Female",
+                            "Nonbinary",
+                            "Genderfluid",
+                            "Agender",
+                            "Anxiegender",
+                            "Blurgender",
+                            "Collgender",
+                            "Condigender",
+                            "Demigender",
+                            "Domgender",
+                            "Egogender",
+                            "Esspigender",
+                            "Exgender",
+                            "Femgender",
+                            "Genderblank",
+                            "Deliciagender",
+                            "Cloudgender",
+                            "Cengender",
+                            "Demiflux",
+                            "Cavusgender",
+                            "Duragender",
+                            "Choose not to say/Other"
+                        );
 
-<label>Enter your password: </label>
-<input type="text" name="pw-name" id="pw-id">
+                        foreach ($genders as $gender) {
+                            echo "<option value='$gender'>$gender</option>";
+                        }
+                        ?>
+                    </select>
+                
+                    <!-- TODO: Add your own survey questions -->
 
-<label>What age are you? </label>
-<input type="radio" name="0" id="1">
-<label>0-12 </label>
-<input type="radio" name="1" id="1">
-<label>13-17 </label>
-<input type="radio" name="2" id="1">
-<label>18-22 </label>
-<input type="radio" name="3" id="1">
-<label>23-27 </label>
-<input type="radio" name="4" id="1">
-<label>28-32 </label>
-<input type="radio" name="5" id="1">
-<label>33-37 </label>
-<input type="radio" name="6" id="1">
-<label>38-42 </label>
-<input type="radio" name="7" id="1">
-<label>43-47 </label>
-<input type="radio" name="8" id="1">
-<label>48-52 </label>
-<input type="radio" name="9" id="1">
-<label>53-57 </label>
-<input type="radio" name="10" id="1">
-<label>58-62 </label>
-<input type="radio" name="11" id="1">
-<label>63-67 </label>
-<input type="radio" name="12" id="1">
-<label>68+ </label>
+                    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</main>
 
-<select name="gender" id="gender">
-    <option value="m">Male</option>
-    <option value="f">Female</option>
-    <option value="nb">Nonbinary</option>
-    <option value="gf">Genderfluid</option>
-    <option value="a">Agender</option>
-    <option value="o">Choose not to say/Other</option>
-</select>
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="container text-center">
+        <span class="text-muted">Copyright © 2024 Derick Marr, All Rights Reserved</span>
+    </div>
+</footer>
 
-<!-- TODO: Add your own survey questions -->
-
-</form>
-
-<!-- TODO: All the backend PHP/SQL stuff! (you may need a separate file for this!) -->
-
-</body></html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
