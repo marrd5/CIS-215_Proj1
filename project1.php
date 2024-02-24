@@ -1,3 +1,11 @@
+<!-------------------------------------------------------
+//  "Project 1 Survey/Quiz": Correcting and adjusting
+//  a "sub-par" page.
+//
+//  Edited & Written by: Derick Marr
+//  Contact: dmarr@genesee.edu
+//------------------------------------------------------>
+
 <!DOCTYPE html>
 <html><head>
 <title>Survey: Survey Name</title>  <!-- TODO: Change "Survey Name" to the topic of your survey -->
