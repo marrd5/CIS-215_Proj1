@@ -14,6 +14,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-dark text-light d-flex flex-column min-vh-100">
+
 <header>
   <style>
     .quiz-button {
@@ -45,7 +46,7 @@
       text-decoration: none;
       display: inline-block;
       margin-top: 3.5rem;
-      margin-bottom: 3.5rem; /* Fixed margin-bottom value */
+      margin-bottom: 3.5rem
       font-size: 1.25rem;
       cursor: pointer;
       box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.226);
@@ -72,7 +73,7 @@
     }
   </style>
   <div class="container py-4">
-      <h1 class="text-center" style="font-size: 3rem;">Survey: Project 1 </h1>
+      <h1 class="text-center" style="font-size: 3rem;">Survey: Project 1</h1>
   </div>
 </header>
 
@@ -176,7 +177,7 @@
           ?>
           <label for="fav-question"><h4>Enter the number of your favorite question</h4></label>
           <input type="number" step="1" name="fav-question" id="fav-question" class="form-control">
-          <label for="submit-date"><h4>Enter your favorite date</h4></label>
+          <label for="submit-date"><h4>Enter the date</h4></label>
           <input type="date" name="submit-date" id="submit-date" class="form-control">
           <button type="submit" class="submit-button">Submit</button>
         </div>
