@@ -46,7 +46,7 @@
       text-decoration: none;
       display: inline-block;
       margin-top: 3.5rem;
-      margin-bottom: 3.5rem
+      margin-bottom: 3.5rem;
       font-size: 1.25rem;
       cursor: pointer;
       box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.226);
